@@ -14,6 +14,69 @@ struct node *InsertAtHead(struct node *head,int data){
 	return ptr;
 }
 
+struct node *InsertAtIndex(struct node * head,int index,int data){
+	int i=0;
+	struct node *p=head;
+	struct node *ptr = (struct node*)malloc(sizeof(struct node));
+	while(i!=index-1){
+		p=p->next;
+		i++;
+	}
+	
+	ptr->data=data;
+    ptr->next=p->next;
+    p->next=ptr;
+
+    return head;
+}
+
+
+struct node *InsertAtTail(struct node *head,int data){
+	struct node *ptr = (struct node*)malloc(sizeof(struct node));
+	struct node *p=head;
+
+	int i=0;
+
+	while(p->next!=NULL){
+		p=p->next;
+	}
+
+	ptr->data=data;
+	p->next=ptr;
+	ptr->next=NULL;
+
+	return head;
+}
+
+struct node *deleteHead(struct node *head){
+	struct node *ptr=head;
+	head = head->next;
+	free(ptr);
+	return head;
+}
+
+struct node *deleteAtIndex(struct node *head, int index){
+	struct node *ptr=head;
+	struct node *p=head;
+
+	int i=0;
+
+	while(i!=index-1){
+		ptr=ptr->next;
+		i++;
+	}
+
+	while(i!=index+1){
+		p=p->next;
+		i++;
+	}
+
+	ptr->next=p->next;
+	free(p);
+	return head;
+
+}
+
 void traversal(struct node *ptr){
 	if(ptr==NULL) printf("List is Empty!");
 	else{
@@ -25,6 +88,7 @@ void traversal(struct node *ptr){
 		printf("\n");
 	}
 }
+
 
 int main(){
 
@@ -51,7 +115,16 @@ int main(){
 	third->next = NULL;
 
 	traversal(head);
-	head = InsertAtHead(head,0);
+	// head = InsertAtHead(head,0);
+	// traversal(head);
+	// head = InsertAtIndex(head,3,3);
+	// traversal(head);
+	// head = InsertAtTail(head,6);
+	// traversal(head);
+
+	// head = deleteHead(head);
+	// traversal(head);
+	head = deleteAtIndex(head,2);
 	traversal(head);
 	
 
