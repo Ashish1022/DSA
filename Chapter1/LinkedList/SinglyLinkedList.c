@@ -1,10 +1,10 @@
-#include<stdio.h>
-#include<stdlib.h>
+// #include<stdio.h>
+// #include<stdlib.h>
 
-struct node{
-    int data;
-    struct node *next;
-};
+// struct node{
+//     int data;
+//     struct node *next;
+// };
 
 // INSERTION FUNCTIONS
 
@@ -54,84 +54,84 @@ struct node{
 // DELETION FUNCTIONS
 
 
-struct node *deleteHeadNode(struct node *head){
-    struct node *ptr=head;
-    head=head->next;
-    free(ptr);
-    return head;
-}
+// struct node *deleteHeadNode(struct node *head){
+//     struct node *ptr=head;
+//     head=head->next;
+//     free(ptr);
+//     return head;
+// }
 
-struct node *deleteAtIndex(struct node* head,int index){
-    struct node *p=head;
-    struct node *p1=head;
-    int i=0;
+// struct node *deleteAtIndex(struct node* head,int index){
+//     struct node *p=head;
+//     struct node *p1=head;
+//     int i=0;
 
-    while(i!=index-1){
-        p=p->next;
-        i++;
-    }
-    while(i!=index+1){
-        p1=p1->next;
-        i++;
-    }
+//     while(i!=index-1){
+//         p=p->next;
+//         i++;
+//     }
+//     while(i!=index+1){
+//         p1=p1->next;
+//         i++;
+//     }
 
-    p->next=p1->next;
-    free(p1);
-    return head;
-}
+//     p->next=p1->next;
+//     free(p1);
+//     return head;
+// }
 
-struct node *deleteAtEnd(struct node *head){
-    struct node *ptr = head;
-    struct node *p = head->next;
-    while(p->next!=NULL){
-        ptr=ptr->next;
-        p=p->next;
-    }
-    ptr->next=NULL;
-    free(p);
+// struct node *deleteAtEnd(struct node *head){
+//     struct node *ptr = head;
+//     struct node *p = head->next;
+//     while(p->next!=NULL){
+//         ptr=ptr->next;
+//         p=p->next;
+//     }
+//     ptr->next=NULL;
+//     free(p);
 
-    return head;
-}
+//     return head;
+// }
 
 
-void traversal(struct node *ptr){
-    printf("Linked List :- ");
-    while(ptr!=NULL){
-        printf("%d ", ptr->data);
-        ptr=ptr->next;
-    }
-    printf("\n");
-}
+// void traversal(struct node *ptr){
+//     printf("Linked List :- ");
+//     while(ptr!=NULL){
+//         printf("%d ", ptr->data);
+//         ptr=ptr->next;
+//     }
+//     printf("\n");
+// }
 
-int main(){
+// int main(){
 
-    struct node *head;
-    struct node *first;
-    struct node *second;
-    struct node *third;
+//     struct node *head;
+//     struct node *first;
+//     struct node *second;
+//     struct node *third;
 
-    head = (struct node*)malloc(sizeof(struct node));
-    first = (struct node*)malloc(sizeof(struct node));
-    second = (struct node*)malloc(sizeof(struct node));
-    third = (struct node*)malloc(sizeof(struct node));
+//     head = (struct node*)malloc(sizeof(struct node));
+//     first = (struct node*)malloc(sizeof(struct node));
+//     second = (struct node*)malloc(sizeof(struct node));
+//     third = (struct node*)malloc(sizeof(struct node));
 
-    head->data = 1;
-    head->next = first;
+//     head->data = 1;
+//     head->next = first;
     
-    first->data = 2;
-    first->next = second;
+//     first->data = 2;
+//     first->next = second;
 
-    second->data = 3;
-    second->next = third;
+//     second->data = 3;
+//     second->next = third;
 
-    third->data = 4;
-    third->next = NULL;
+//     third->data = 4;
+//     third->next = NULL;
 
-    traversal(head);
-    // head = deleteHeadNode(head);
-    // head = deleteAtIndex(head,2);
-    head = deleteAtEnd(head);
-    traversal(head);
+//     traversal(head);
+//     // head = deleteHeadNode(head);
+//     // head = deleteAtIndex(head,2);
+//     head = deleteAtEnd(head);
+//     traversal(head);
 
-    return 0;
-}
+//     return 0;
+// }
