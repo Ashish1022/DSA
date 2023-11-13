@@ -77,6 +77,19 @@ struct node *deleteAtIndex(struct node *head, int index){
 
 }
 
+struct node *deleteAtEnd(struct node *head){
+    struct node *ptr = head;
+    struct node *p = head->next;
+    while(p->next!=NULL){
+        ptr=ptr->next;
+        p=p->next;
+    }
+    ptr->next=NULL;
+    free(p);
+
+    return head;
+}
+
 void traversal(struct node *ptr){
 	if(ptr==NULL) printf("List is Empty!");
 	else{
