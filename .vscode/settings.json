@@ -5,5 +5,17 @@
         "*.asm": "arm",
         "*.java": "java",
         "stdio.h": "c"
-    }
+    },
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "connection",
+            "database": "ashish24",
+            "username": "postgres",
+            "password": "Ashish@1022"
+        }
+    ]
 }
