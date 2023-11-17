@@ -20,7 +20,7 @@ void enqueue(int data){
 
 void dequeue(){
     if(head==-1 && tail == -1) printf("Underflow");
-    else if(head==0 && tail == 0){
+    else if(head == 0 && tail == 0){
         head=tail=-1;
     }
     else{
@@ -29,9 +29,6 @@ void dequeue(){
     }
 }
 
-// void front(){
-
-// }
 
 void dispaly(){
     
@@ -54,7 +51,3 @@ int main(){
 
     return 0;
 }
-
-
-
-

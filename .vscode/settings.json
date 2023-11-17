@@ -4,7 +4,8 @@
         "*.c": "c",
         "*.asm": "arm",
         "*.java": "java",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "BFS.C": "cpp"
     },
     "sqltools.connections": [
         {
