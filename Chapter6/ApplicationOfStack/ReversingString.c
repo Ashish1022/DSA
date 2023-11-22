@@ -54,7 +54,7 @@ void reverse(char str[]){
 
 int main(){
 
-    char str[] = "sarthika";
+    char str[] = "ashish";
  
     reverse(str);
     printf("Reversed string is %s", str);
