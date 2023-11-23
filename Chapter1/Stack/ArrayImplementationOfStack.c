@@ -31,7 +31,7 @@ void display(){
 		printf("%d stack empty\n");
 	}
 	else{
-		for(int i=4;i>=0;i--){
+		for(int i=top+1;i>=0;i--){
 			printf("%d\t",stack[i]);
 		}
 	}
